@@ -1,0 +1,916 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 0
+  Top = 0
+  Align = alClient
+  BorderStyle = bsNone
+  Caption = 'Principal'
+  ClientHeight = 672
+  ClientWidth = 1022
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnl_Fundo: TPanel
+    Left = 0
+    Top = 1
+    Width = 1022
+    Height = 671
+    Align = alClient
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    OnMouseEnter = lbl_tituloMouseEnter
+    object pnl_Topo: TPanel
+      Left = 1
+      Top = 1
+      Width = 1020
+      Height = 41
+      Align = alTop
+      BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 0
+      OnMouseEnter = pnl_TopoMouseEnter
+      DesignSize = (
+        1020
+        41)
+      object btn_Fechar: TSpeedButton
+        Left = 973
+        Top = 0
+        Width = 47
+        Height = 42
+        Cursor = crHandPoint
+        Anchors = [akTop, akRight]
+        Flat = True
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          0000000000000200070710044B4B2508AAAA320BE5E53C12FCFC5C38FCFC5839
+          E5E5412AA9A91C124A4A03020707000000000000000000000000000000000000
+          00000601191921079494340BEFEF380CFFFF380CFFFF3D12FFFF5D39FFFF623F
+          FFFF623FFFFF5C3BEFEF382493930A0619190000000000000000000000000601
+          19192708B2B2380CFFFF380CFFFF380CFFFF380CFFFF3D12FFFF5D39FFFF623F
+          FFFF623FFFFF623FFFFF623FFFFF442CB2B20A06191900000000010006062107
+          9494380CFFFF380CFFFF380CFDFF380CFEFF380CFFFF3D12FFFF5D39FFFF6340
+          FFFF623FFEFF613EFDFF623FFFFF623FFFFF382493930201060610034A4A340B
+          EEEE380CFFFF380CFEFF2806C1FF2806C2FF370BFBFF3D12FFFF5D39FFFF603D
+          FAFF3D20C2FF3C1FC0FF613EFDFF623FFFFF5B3BEDED1C124A4A2508A8A8380C
+          FFFF380CFFFF380CFFFF2806C2FF190187FF2705BFFF3D12FBFF5B37FBFF3B1E
+          BEFF1A0387FF3D20C2FF623FFFFF623FFFFF623FFFFF412AA8A8320BE4E4380C
+          FFFF380CFFFF380CFFFF370CFBFF2706BFFF190088FF2B0BBDFF3618BCFF1B03
+          88FF3B1EBEFF603DFBFF623FFFFF623FFFFF623FFFFF5738E3E3370CFBFB380C
+          FFFF380CFFFF380CFFFF380CFFFF370CFBFF2706BDFF190185FF190185FF3A1D
+          BCFF603DFBFF623FFFFF623FFFFF623FFFFF623FFFFF603EFBFB370CFBFB380C
+          FFFF380CFFFF380CFFFF380CFFFF370CFBFF2706BDFF190185FF190185FF3A1D
+          BCFF603DFBFF623FFFFF623FFFFF623FFFFF623FFFFF603EFBFB320BE4E4380C
+          FFFF380CFFFF380CFFFF370CFBFF2706BFFF190088FF2B0BBDFF3618BCFF1B03
+          88FF3B1EBEFF603DFBFF623FFFFF623FFFFF623FFFFF5738E3E32508A8A8380C
+          FFFF380CFFFF380CFFFF2806C2FF190187FF2705BFFF3D12FBFF5B37FBFF3B1E
+          BEFF1A0387FF3D20C2FF623FFFFF623FFFFF623FFFFF412AA8A810034A4A340B
+          EEEE380CFFFF380CFEFF2806C1FF2806C2FF370BFBFF3D12FFFF5D39FFFF603D
+          FAFF3D20C2FF3C1FC0FF613EFDFF623FFFFF5B3BEDED1C124A4A010006062107
+          9494380CFFFF380CFFFF380CFDFF380CFEFF380CFFFF3D12FFFF5D39FFFF6340
+          FFFF623FFEFF613EFDFF623FFFFF623FFFFF3824939302010606000000000601
+          19192708B2B2380CFFFF380CFFFF380CFFFF380CFFFF3D12FFFF5D39FFFF623F
+          FFFF623FFFFF623FFFFF623FFFFF442CB2B20A06191900000000000000000000
+          00000601191921079494340BEFEF380CFFFF380CFFFF3D12FFFF5D39FFFF623F
+          FFFF623FFFFF5C3BEFEF382493930A0619190000000000000000000000000000
+          0000000000000200070710044B4B2508AAAA320BE5E53C12FCFC5C38FCFC5839
+          E5E5412AA9A91C124A4A03020707000000000000000000000000}
+        OnClick = btn_FecharClick
+      end
+      object btn_Max: TSpeedButton
+        Left = 925
+        Top = 0
+        Width = 47
+        Height = 41
+        Cursor = crHandPoint
+        Anchors = [akTop, akRight]
+        Flat = True
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00030000006C000000A7000000AA0000008E0000000000000000000000000000
+          00000000008E000000AA000000A70000006C0000000300000000000000000000
+          006D000000F7000000AD000000AA0000008E0000000000000000000000000000
+          00000000008E000000AA000000AE000000F80000006B00000000000000000000
+          00A8000000AD0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000AE000000A700000000000000000000
+          00AA000000AA0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000AA000000AA00000000000000000000
+          008E0000008E0000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000008E0000008E00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          008E0000008E0000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000008E0000008E00000000000000000000
+          00AA000000AA0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000AA000000AA00000000000000000000
+          00A8000000AD0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000AE000000A700000000000000000000
+          006E000000F7000000AD000000AA0000008E0000000000000000000000000000
+          00000000008E000000AA000000AD000000F70000006C00000000000000000000
+          00030000006E000000A7000000AA0000008E0000000000000000000000000000
+          00000000008E000000AA000000A70000006D0000000300000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+        OnClick = btn_MaxClick
+      end
+      object img_logo: TImage
+        Left = 0
+        Top = 0
+        Width = 41
+        Height = 41
+        Proportional = True
+      end
+      object lbl_titulo: TLabel
+        Left = 47
+        Top = 0
+        Width = 88
+        Height = 45
+        Caption = 'Ephix'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -37
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        OnMouseEnter = lbl_tituloMouseEnter
+      end
+      object pnl_Barra: TPanel
+        Left = 0
+        Top = 40
+        Width = 1020
+        Height = 1
+        Align = alBottom
+        BevelOuter = bvNone
+        Color = 15395562
+        ParentBackground = False
+        TabOrder = 0
+      end
+    end
+    object pnl_Menu: TPanel
+      Left = 1
+      Top = 42
+      Width = 1020
+      Height = 39
+      Align = alTop
+      BevelOuter = bvNone
+      Color = clScrollBar
+      ParentBackground = False
+      TabOrder = 1
+      OnMouseEnter = pnl_MenuMouseEnter
+      object btn_Menu: TSpeedButton
+        Tag = 1
+        Left = 0
+        Top = 0
+        Width = 40
+        Height = 39
+        Cursor = crHandPoint
+        Margins.Bottom = 0
+        Align = alLeft
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -19
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000210000
+          0023000000230000002300000023000000230000002300000023000000230000
+          00230000002300000023000000230000002300000023000000210000007F0000
+          0086000000860000008600000086000000860000008600000086000000860000
+          008600000086000000860000008600000086000000860000007F000000030000
+          0003000000030000000300000003000000030000000300000003000000030000
+          0003000000030000000300000003000000030000000300000003000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000550000
+          005A000000590000005900000059000000590000005900000059000000590000
+          0059000000590000005900000059000000590000005A00000055000000550000
+          005A000000590000005900000059000000590000005900000059000000590000
+          0059000000590000005900000059000000590000005A00000055000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000030000
+          0003000000030000000300000003000000030000000300000003000000030000
+          00030000000300000003000000030000000300000003000000030000007F0000
+          0086000000860000008600000086000000860000008600000086000000860000
+          008600000086000000860000008600000086000000860000007F000000210000
+          0023000000230000002300000023000000230000002300000023000000230000
+          0023000000230000002300000023000000230000002300000021000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+        Margin = 0
+        ParentFont = False
+        OnMouseEnter = pnl_opcaoMouseEnter
+      end
+      object Btn_configuracao: TSpeedButton
+        Tag = 3
+        Left = 321
+        Top = 0
+        Width = 156
+        Height = 39
+        Caption = 'Configura'#231#245'es'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -19
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Margin = 0
+        ParentFont = False
+        OnMouseEnter = Btn_configuracaoMouseEnter
+      end
+      object Btn_Usuarios: TSpeedButton
+        Tag = 2
+        Left = 218
+        Top = 0
+        Width = 99
+        Height = 39
+        Caption = 'Usuarios'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -19
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Margin = 0
+        ParentFont = False
+        OnMouseEnter = Btn_UsuariosMouseEnter
+      end
+      object Btn_Suporte: TSpeedButton
+        Tag = 4
+        Left = 475
+        Top = 0
+        Width = 142
+        Height = 39
+        Caption = 'Suporte'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -19
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Margin = 0
+        ParentFont = False
+        OnMouseEnter = Btn_SuporteMouseEnter
+      end
+    end
+    object pnl_opcao: TPanel
+      Tag = 1
+      Left = -4
+      Top = 81
+      Width = 224
+      Height = 520
+      Align = alCustom
+      BevelKind = bkFlat
+      BevelOuter = bvNone
+      TabOrder = 2
+      Visible = False
+      object Btn_Financeiro: TSpeedButton
+        Left = 0
+        Top = 450
+        Width = 220
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Financeiro'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        OnMouseEnter = Btn_FinanceiroMouseEnter
+        ExplicitTop = 460
+      end
+      object Btn_Caixa: TSpeedButton
+        Left = 0
+        Top = 400
+        Width = 220
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Caixa'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        OnMouseEnter = Btn_CaixaMouseEnter
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object Btn_Vendas: TSpeedButton
+        Left = 0
+        Top = 350
+        Width = 220
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Vendas'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        OnMouseEnter = Btn_VendasMouseEnter
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object Btn_Orcamentos: TSpeedButton
+        Left = 0
+        Top = 300
+        Width = 220
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Or'#231'amentos'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object Btn_Servicos: TSpeedButton
+        Left = 0
+        Top = 250
+        Width = 220
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Servi'#231'os'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object Btn_Estoque: TSpeedButton
+        Left = 0
+        Top = 200
+        Width = 220
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Estoque'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object Btn_Empresa: TSpeedButton
+        Left = 0
+        Top = 150
+        Width = 220
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Empresa'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object Btn_Funcionarios: TSpeedButton
+        Left = 0
+        Top = 100
+        Width = 220
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Funcionarios'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object Btn_Fornecedores: TSpeedButton
+        Left = 0
+        Top = 50
+        Width = 220
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Fornecedores'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object Btn_Clientes: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 220
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Anchors = []
+        Caption = 'Clientes'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 8
+        ExplicitTop = -6
+        ExplicitWidth = 213
+      end
+    end
+    object Pnl_Configuracoes: TPanel
+      Tag = 3
+      Left = 319
+      Top = 81
+      Width = 156
+      Height = 272
+      BevelKind = bkFlat
+      BevelOuter = bvNone
+      TabOrder = 3
+      Visible = False
+      object btnBtn_Historico_Pagamento: TSpeedButton
+        Left = 0
+        Top = 50
+        Width = 152
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Historico Pagamento'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 2
+        ExplicitTop = 9
+        ExplicitWidth = 158
+      end
+      object btnBtn_Backup_restauracao: TSpeedButton
+        Left = 0
+        Top = 150
+        Width = 152
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Backup e Restaura'#231#245'es'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 4
+        ExplicitTop = 153
+        ExplicitWidth = 197
+      end
+      object btnBtn_Atualizacao_versao: TSpeedButton
+        Left = 0
+        Top = 200
+        Width = 152
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Atualiza'#231#245'es e Vers'#227'o'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object btnBtn_Configurar_sistema: TSpeedButton
+        Left = 0
+        Top = 100
+        Width = 152
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Configurar Sistema'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object btnBtn_Servidor: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 152
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Servidor'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 2
+        ExplicitTop = 9
+        ExplicitWidth = 158
+      end
+    end
+    object Pnl_Usuarios: TPanel
+      Tag = 2
+      Left = 219
+      Top = 81
+      Width = 99
+      Height = 225
+      BevelKind = bkFlat
+      BevelOuter = bvNone
+      TabOrder = 4
+      Visible = False
+      object btnBtn_Log_Acesso: TSpeedButton
+        Left = 0
+        Top = 50
+        Width = 95
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Log de Acesso'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 2
+        ExplicitTop = 9
+        ExplicitWidth = 183
+      end
+      object btnBtn_Permissoes: TSpeedButton
+        Left = 0
+        Top = 150
+        Width = 95
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Permiss'#245'es'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 4
+        ExplicitTop = 144
+      end
+      object btnBtn_Grupo_Usuarios: TSpeedButton
+        Left = 0
+        Top = 100
+        Width = 95
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Grupos de Usuario'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+        ExplicitWidth = 197
+      end
+      object btnBtn_Novo_Usuario: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 95
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Caption = 'Novo Usuario'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        ExplicitLeft = 2
+        ExplicitTop = 9
+        ExplicitWidth = 183
+      end
+    end
+    object Pnl_Lateral: TPanel
+      Left = 961
+      Top = 82
+      Width = 60
+      Height = 588
+      Align = alRight
+      Color = clSilver
+      ParentBackground = False
+      TabOrder = 5
+      OnCanResize = Pnl_LateralCanResize
+      OnMouseEnter = Pnl_LateralMouseEnter
+      object btn1: TSpeedButton
+        Left = 1
+        Top = 1
+        Width = 58
+        Height = 50
+        Cursor = crHandPoint
+        Align = alTop
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -16
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        Glyph.Data = {
+          36100000424D3610000000000000360000002800000020000000200000000100
+          2000000000000010000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000050A020C23480D573D7E169850A51DC85DC122E964CE24F964CE24F95DC1
+          22E950A51DC83C7D169722470C56050A020C0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000000000000A1403183C7C
+          169662CA23F466D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF62CA23F43D7F16990E1C0522000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000003060107346B138162CA23F466D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF64CE24F9366F13860306
+          0107000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000081103154DA01CC166D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF4FA4
+          1DC60A1403180000000000000000000000000000000000000000000000000000
+          000000000000000000001226072E5BBC21E366D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF5ABB21E21225072D00000000000000000000000000000000000000000000
+          0000000000000A1403185ABB21E266D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF5CBD21E50B16041B000000000000000000000000000000000000
+          00000307010850A51DC766D325FF66D325FF67D326FF67D326FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF4FA41DC6030601070000000000000000000000000000
+          00003772148A66D325FF66D325FF66D325FF67D326FFE1F5D6FFC9EFB3FFA1E3
+          79FF7AD941FF66D325FF6AD42BFF99E16EFFC7EEAFFFDAF3CBFFE9F7E1FFDEF4
+          D1FFCAEFB4FF9DE274FF6FD632FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF367014870000000000000000000000000F1F
+          052564CF24FA66D325FF66D325FF66D325FF66D325FFC7EEAFFFFDFDFDFFFDFD
+          FDFFFDFDFDFFE9F7E0FFF1FAECFFFDFDFDFFF9FCF7FFE6F6DCFFD6F2C5FFDFF4
+          D2FFF6FBF4FFFDFDFDFFF2FAEEFFA9E585FF68D428FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF64CE24F90E1C052200000000000000003E81
+          179C66D325FF66D325FF66D325FF66D325FF66D325FF9DE274FFFDFDFDFFB8EA
+          9AFFB7E998FFDEF4D1FFE0F5D4FFA0E379FF6BD52DFF66D325FF66D325FF66D3
+          25FF6BD42CFF95E068FFE0F5D4FFFDFDFDFFD2F1C0FF6FD632FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF3E7F169A00000000050A020C62CA
+          23F466D325FF66D325FF66D325FF66D325FF66D325FF74D73AFFFCFDFCFFBDEB
+          A2FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF67D327FFB5E996FFFCFDFCFFD5F2C4FF68D428FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF62CA23F4050A020C23490D5866D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FFE2F5D7FFE6F6
+          DCFF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FFB2E891FFFDFDFDFFB2E891FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF22460C553E7F169A66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF72D636FFF6FBF3FFDBF3
+          CDFF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF82DB4DFFC1ED
+          A8FFEBF8E3FFECF8E4FFACE689FF66D325FF67D326FFD8F2C9FFF6FBF4FF75D7
+          3AFF66D325FF66D325FF66D325FF66D325FF66D325FF3D7E169851A71DCA66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FFA9E685FFFDFDFDFF8FDE
+          60FF66D325FF66D325FF66D325FF66D325FF6BD42CFFBFECA4FFFBFCFAFFFDFD
+          FDFFFDFDFDFFFDFDFDFFFDFDFDFF8ADD58FF66D325FF8BDE59FFFDFDFDFFACE7
+          8AFF66D325FF66D325FF66D325FF66D325FF66D325FF50A51DC75EC222EB66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FFD5F2C4FFF0F9EAFF67D3
+          27FF66D325FF66D325FF66D325FF6ED530FFD9F3CAFFFDFDFDFFDAF3CBFF97E0
+          6BFFE7F7DEFFFDFDFDFFDEF4D1FF7DDA45FF66D325FF67D326FFECF8E5FFDAF3
+          CBFF66D325FF66D325FF66D325FF66D325FF66D325FF5DC122E964CE24F966D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FFEFF9E9FFD2F1C0FF66D3
+          25FF66D325FF66D325FF67D327FFD0F1BCFFFDFDFDFFB8EA9AFF68D428FF66D3
+          25FF7CD945FF8EDE5FFF66D325FF66D325FF66D325FF66D325FFCDF0B9FFF2FA
+          EDFF66D325FF66D325FF66D325FF66D325FF66D325FF63CD24F864CE24F966D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FFF8FCF6FFC7EEAFFF66D3
+          25FF66D325FF66D325FFADE78BFFFDFDFDFFC6EEAEFF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FFC0ECA5FFFCFD
+          FCFF69D429FF66D325FF66D325FF66D325FF66D325FF63CD24F85EC222EB66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FFEEF9E8FFD1F1BEFF66D3
+          25FF66D325FF6FD632FFF6FBF4FFFDFDFDFF96E069FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FFC9EFB3FFF6FB
+          F3FF66D325FF66D325FF66D325FF66D325FF66D325FF5DC122E951A71DCA66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FFDBF3CDFFE9F7E1FF66D3
+          25FF66D325FF8DDE5DFFFDFDFDFFFDFDFDFFE4F6DAFF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FFE2F5D7FFE3F5
+          D7FF66D325FF66D325FF66D325FF66D325FF66D325FF50A51DC73E80169B66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FFB1E891FFFDFDFDFF83DB
+          4EFF66D325FF82DB4CFFFDFDFDFFFDFDFDFFC1EDA8FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF7BD943FFFDFDFDFFB9EA
+          9CFF66D325FF66D325FF66D325FF66D325FF66D325FF3D7F1699244A0D5966D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF7DDA45FFFBFCFAFFCCF0
+          B7FF66D325FF66D325FFC3EDAAFFFBFCFAFF81DB4BFF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FFC4EDABFFFCFDFCFF83DB
+          4EFF66D325FF66D325FF66D325FF66D325FF66D325FF23480D57060C020E62CB
+          24F566D325FF66D325FF66D325FF66D325FF66D325FF66D325FFC2EDA9FFFCFD
+          FCFF9AE170FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF94DF67FFFCFDFBFFCAEFB4FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF62CA23F4050B020D000000003F82
+          179D66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF70D633FFE5F6
+          DBFFF8FCF6FF97E06CFF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF91DF63FFF6FBF3FFE9F7E1FF72D636FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF3C7C169600000000000000000F1F
+          062664D024FB66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF7BD9
+          43FFE7F7DEFFFCFDFCFFC2EDA9FF76D83CFF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF74D739FFBDEBA2FFFBFCFAFFEBF8E3FF7FDA49FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF61C923F30A14031800000000000000000000
+          00003874148C66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF71D634FFCBEFB5FFFCFDFCFFFBFCFAFFD9F3CAFFBDEBA1FFB1E890FFBBEB
+          9FFFD7F3C6FFFBFCFAFFFDFDFDFFD0F1BDFF73D738FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF346B13810000000000000000000000000000
+          00000307010853AC1ED066D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF86DC53FFC1ECA7FFECF8E5FFFDFDFDFFFDFDFDFFFDFD
+          FDFFEFF9E9FFC3EDAAFF8ADD58FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF52A91ECC040701090000000000000000000000000000
+          0000000000000F1F05255EC222EA66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF6BD42CFF77D83DFF6CD5
+          2EFF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF5BBC21E30A140318000000000000000000000000000000000000
+          00000000000000000000142907315EC222EA66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF5BBC21E31226072E00000000000000000000000000000000000000000000
+          00000000000000000000000000000F1F052554AF1FD366D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF50A5
+          1DC70A1504190000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000040701093874148C64D024FB66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF66D325FF66D325FF64CF24FA3772148A0307
+          0108000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000000000000F1F06263F82
+          179D62CB24F566D325FF66D325FF66D325FF66D325FF66D325FF66D325FF66D3
+          25FF66D325FF66D325FF66D325FF62CB24F53E81179C0F1F0525000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000060C020E244A0D593E80169B51A71DCA5EC222EA64CF24FA64CF24FA5EC2
+          22EA51A71DCA3E7F169A23490D58050B020D0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000}
+        ParentFont = False
+        OnClick = Btn_WhatsAppClick
+        OnMouseEnter = btn1MouseEnter
+        OnMouseLeave = btn1MouseLeave
+        ExplicitLeft = 2
+        ExplicitTop = 9
+        ExplicitWidth = 48
+      end
+    end
+    object pnl1: TPanel
+      Left = 1
+      Top = 81
+      Width = 1020
+      Height = 1
+      Align = alTop
+      Color = clSilver
+      ParentBackground = False
+      TabOrder = 6
+    end
+    object SCR_Box: TScrollBox
+      Left = 473
+      Top = 82
+      Width = 145
+      Height = 271
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      BevelKind = bkFlat
+      DoubleBuffered = False
+      Color = clWhite
+      ParentBackground = True
+      ParentColor = False
+      ParentDoubleBuffered = False
+      TabOrder = 7
+      Visible = False
+      object btn2: TSpeedButton
+        Left = 0
+        Top = 8
+        Width = 113
+        Height = 50
+        Cursor = crHandPoint
+        Caption = 'Servidor'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGray
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 1022
+    Height = 1
+    Align = alTop
+    BevelOuter = bvNone
+    Color = clBtnShadow
+    ParentBackground = False
+    TabOrder = 1
+    Visible = False
+  end
+  object Pnl_SubMenu_Caixa: TPanel
+    Left = 219
+    Top = 484
+    Width = 250
+    Height = 173
+    BevelKind = bkFlat
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 2
+    Visible = False
+    object SpeedButton1: TSpeedButton
+      Left = 0
+      Top = 0
+      Width = 246
+      Height = 50
+      Cursor = crHandPoint
+      Align = alTop
+      Caption = 'Financeiro'
+      Flat = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clGray
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      ExplicitTop = 8
+    end
+  end
+end

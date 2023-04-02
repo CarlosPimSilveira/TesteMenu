@@ -1,0 +1,25 @@
+unit EUPrincipal;
+
+interface
+
+uses
+  system.SysUtils;
+
+type
+  Tprincipal = class
+  private
+    procedure AumentaCampo;
+  public
+
+  end;
+
+implementation
+
+{ Tprincipal }
+
+procedure Tprincipal.AumentaCampo;
+begin
+  with := 250;
+end;
+
+end.

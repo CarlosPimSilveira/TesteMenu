@@ -1,0 +1,259 @@
+unit UPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
+  dxGDIPlusClasses, ShellApi ;
+
+type
+  TFrmPrincipal = class(TForm)
+    pnl_Fundo: TPanel;
+    pnl_Topo: TPanel;
+    pnl_Barra: TPanel;
+    btn_Fechar: TSpeedButton;
+    btn_Max: TSpeedButton;
+    img_logo: TImage;
+    lbl_titulo: TLabel;
+    pnl_Menu: TPanel;
+    btn_Menu: TSpeedButton;
+    pnl_opcao: TPanel;
+    Btn_Financeiro: TSpeedButton;
+    Btn_Caixa: TSpeedButton;
+    Btn_Vendas: TSpeedButton;
+    Btn_Orcamentos: TSpeedButton;
+    Btn_Servicos: TSpeedButton;
+    Btn_Estoque: TSpeedButton;
+    Btn_Empresa: TSpeedButton;
+    Btn_Funcionarios: TSpeedButton;
+    Btn_Fornecedores: TSpeedButton;
+    Btn_configuracao: TSpeedButton;
+    Pnl_Configuracoes: TPanel;
+    btnBtn_Historico_Pagamento: TSpeedButton;
+    btnBtn_Backup_restauracao: TSpeedButton;
+    btnBtn_Atualizacao_versao: TSpeedButton;
+    btnBtn_Configurar_sistema: TSpeedButton;
+    btnBtn_Servidor: TSpeedButton;
+    Pnl_Usuarios: TPanel;
+    btnBtn_Log_Acesso: TSpeedButton;
+    btnBtn_Permissoes: TSpeedButton;
+    btnBtn_Grupo_Usuarios: TSpeedButton;
+    btnBtn_Novo_Usuario: TSpeedButton;
+    Btn_Usuarios: TSpeedButton;
+    Btn_Suporte: TSpeedButton;
+    Btn_Clientes: TSpeedButton;
+    Pnl_Lateral: TPanel;
+    btn1: TSpeedButton;
+    pnl1: TPanel;
+    Panel2: TPanel;
+    Pnl_SubMenu_Caixa: TPanel;
+    ScrollBox1: TScrollBar;
+    SCR_Box: TScrollBox;
+    SpeedButton1: TSpeedButton;
+    ScrollBar1: TScrollBar;
+    procedure btn_FecharClick(Sender: TObject);
+    procedure btn_MaxClick(Sender: TObject);
+    procedure Btn_WhatsAppClick(Sender: TObject);
+    procedure pnl_opcaoMouseEnter(Sender: TObject);
+    procedure lbl_tituloMouseEnter(Sender: TObject);
+    procedure Pnl_LateralMouseEnter(Sender: TObject);
+    procedure btn1MouseLeave(Sender: TObject);
+    procedure pnl_MenuMouseEnter(Sender: TObject);
+    procedure Pnl_LateralCanResize(Sender: TObject; var NewWidth,
+      NewHeight: Integer; var Resize: Boolean);
+    procedure btn1MouseEnter(Sender: TObject);
+    procedure LimparCap;
+    procedure TamanhoCampo;
+    procedure MenorCampo;
+    procedure pnl_TopoMouseEnter(Sender: TObject);
+    procedure Btn_CaixaMouseEnter(Sender: TObject);
+    procedure Btn_FinanceiroMouseEnter(Sender: TObject);
+    procedure Btn_VendasMouseEnter(Sender: TObject);
+    procedure Btn_UsuariosMouseEnter(Sender: TObject);
+    procedure Btn_configuracaoMouseEnter(Sender: TObject);
+    procedure Btn_SuporteMouseEnter(Sender: TObject);
+
+  private
+    procedure Prc_Controlar_Menu (Botao: TspeedButton; Ativar : Boolean);
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+uses
+  EUPrincipal;
+{$R *.dfm}
+
+procedure TFrmPrincipal.Prc_Controlar_Menu(Botao: TspeedButton; Ativar: Boolean);
+var
+  I: Integer;
+begin
+  if Ativar then
+  begin
+    for I := 0 to FrmPrincipal.ComponentCount - 1 do
+    begin
+
+      if (FrmPrincipal.Components[I] is TPanel) and ((FrmPrincipal.Components[I] as TPanel).Tag <> 0) then
+      begin
+
+        if (FrmPrincipal.Components[I] as TPanel).Tag = Botao.Tag then
+        begin
+          (FrmPrincipal.Components[I] as TPanel).Visible := true;
+          (FrmPrincipal.Components[I] as TPanel).Left := Botao.Left;
+
+        end
+        else
+          (FrmPrincipal.Components[I] as TPanel).Visible := false;
+
+      end;
+
+    end; //For fim
+
+
+  end
+  else
+  begin
+
+    for I := 0 to FrmPrincipal.ComponentCount - 1 do
+    begin
+
+      if (FrmPrincipal.Components[I] is TPanel) and ((FrmPrincipal.Components[I] as TPanel).Tag <> 0) then
+        (FrmPrincipal.Components[I] as TPanel).Visible := false;
+    end; //for fim
+  end;
+
+end;
+
+procedure TFrmPrincipal.TamanhoCampo;
+begin
+  btn_Menu.Width := 220;
+end;
+
+procedure TFrmPrincipal.btn1MouseEnter(Sender: TObject);
+begin
+  Pnl_Lateral.Width := 250;
+end;
+
+procedure TFrmPrincipal.btn1MouseLeave(Sender: TObject);
+begin
+  Pnl_Lateral.Width := 50;
+  LimparCap;
+end;
+
+procedure TFrmPrincipal.Btn_CaixaMouseEnter(Sender: TObject);
+begin
+  Pnl_SubMenu_Caixa.Visible := True;    //
+  //Btn_Caixa.Glyph.LoadFromFile();
+
+end;
+
+procedure TFrmPrincipal.Btn_configuracaoMouseEnter(Sender: TObject);
+begin
+  Pnl_Usuarios.Visible := false;
+end;
+
+procedure TFrmPrincipal.btn_FecharClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TFrmPrincipal.Btn_FinanceiroMouseEnter(Sender: TObject);
+begin
+  Pnl_SubMenu_Caixa.Visible := false;
+end;
+
+procedure TFrmPrincipal.btn_MaxClick(Sender: TObject);
+begin
+  Application.Minimize;
+end;
+
+procedure TFrmPrincipal.Btn_SuporteMouseEnter(Sender: TObject);
+begin
+  Pnl_Usuarios.Visible := false;
+end;
+
+procedure TFrmPrincipal.Btn_UsuariosMouseEnter(Sender: TObject);
+begin
+  Pnl_Usuarios.Visible := True;
+  btn_Menu.Caption := '';
+  MenorCampo;
+  pnl_opcao.Visible := false;
+end;
+
+procedure TFrmPrincipal.Btn_VendasMouseEnter(Sender: TObject);
+begin
+  Pnl_SubMenu_Caixa.Visible := false;
+end;
+
+procedure TFrmPrincipal.Btn_WhatsAppClick(Sender: TObject);
+begin
+  ShellExecute(Handle, 'open', 'http://wa.me/5519992096170', nil, nil, SW_SHOWMAXIMIZED);
+end;
+
+procedure TFrmPrincipal.lbl_tituloMouseEnter(Sender: TObject);
+begin
+  Prc_Controlar_Menu ( nil, false);
+  Pnl_SubMenu_Caixa.Visible := false;
+  Pnl_Lateral.Width := 50;
+  LimparCap;
+  MenorCampo;
+end;
+
+procedure TFrmPrincipal.LimparCap;
+begin
+  btn1.Caption := '';
+  btn_Menu.Caption := '';
+end;
+
+procedure TFrmPrincipal.MenorCampo;
+begin
+  btn_Menu.Width := 40;
+end;
+
+procedure TFrmPrincipal.Pnl_LateralCanResize(Sender: TObject; var NewWidth,
+  NewHeight: Integer; var Resize: Boolean);
+begin
+  if  Pnl_Lateral.Width <= 50 then
+  begin
+    btn1.Glyph;
+  end else
+   btn1.Caption := 'WhatsApp';
+end;
+
+procedure TFrmPrincipal.Pnl_LateralMouseEnter(Sender: TObject);
+begin
+  Pnl_Lateral.Width := 250;
+  MenorCampo;
+end;
+
+procedure TFrmPrincipal.pnl_MenuMouseEnter(Sender: TObject);
+begin
+   Pnl_Lateral.Width := 50;
+   Pnl_Usuarios.Visible := false;
+   MenorCampo;
+   LimparCap;
+end;
+
+procedure TFrmPrincipal.pnl_opcaoMouseEnter(Sender: TObject);
+begin
+  Prc_Controlar_Menu(TComponent(Sender) as TSpeedButton, True);
+  TamanhoCampo;
+  btn_Menu.Caption := 'Opções do Sistema';
+  Pnl_Usuarios.Visible := false;
+end;
+
+procedure TFrmPrincipal.pnl_TopoMouseEnter(Sender: TObject);
+begin
+  MenorCampo;
+  Pnl_Usuarios.Visible := false;
+end;
+
+end.
+
+
